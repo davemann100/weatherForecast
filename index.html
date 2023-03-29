@@ -12,20 +12,64 @@
     />
   </head>
   <body>
-    <div class="container">
-      <h1>Weather Forecast</h1>
-      <div class="card">
-        <div class="card-header">
-          <h2>Pleasanton</h2>
+    <nav class="navbar navbar-expand-sm m-1 mb-4 border-bottom border-success">
+      <div class="container-fluid">
+        <!-- Links -->
+        <a class="navbar-brand" href="#">
+          <img
+            src="assets/navLogo.png"
+            alt="weather logo icon"
+            width="60"
+            height="50"
+          />
+          Weather Forecast
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2 border border-white text-white"
+                type="search"
+                placeholder="Enter a city..."
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container col-6">
+      <div class="card text-white">
+        <div class="card-header d-flex justify-content-center">
+          <h2 class="m-2">Danville</h2>
         </div>
-        <div class="card-body">
-          <h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-            laborum!
-          </h3>
+        <div class="card-body text-center">
+          <img
+            src="assets/placeholder.png"
+            class = "mb-3"
+            alt="current weather condition icon"
+            width="150"
+            height="150"
+          />
+          <h3><span>54</span>&#xB0</h3>
+          <div class="container m-2">
+            <h5 class="text-start mb-4">
+              Cloudy
+            </h5>
+            <h5 class="text-start mb-4">
+              Real Feel: <span>51</span>&#xB0
+            </h5>
+            <h5 class="text-start mb-2">
+              Wind Speed: <span>9</span>mph
+            </h5>
+          </div>
         </div>
-        <div class="card-footer">
-          <p class mb-0>Powered by OpenWeatherMapAPI</p>
+        <div class="card-footer d-flex justify-content-center">
+          <p class="m-1 text-success">Powered by OpenWeatherMapAPI</p>
         </div>
       </div>
     </div>
