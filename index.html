@@ -11,8 +11,8 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-sm m-1 mb-4 border-bottom border-success">
+  <body style="background-image: url('/assets/gg.jpg');">
+    <nav class="navbar navbar-expand-sm m-1 mb-4 bg-dark border-bottom border-success">
       <div class="container-fluid">
         <!-- Links -->
         <a class="navbar-brand" href="#">
@@ -28,12 +28,13 @@
           <li class="nav-item">
             <form class="d-flex">
               <input
-                id = "citySearch"
-                class="form-control me-2 border border-white text-white"
+                id = "searchBar"
+                class="form-control me-2 border border-white text-white rounded-4"
                 type="search"
+                oninput="getCity(this)"
                 placeholder="Enter a city..."
               />
-              <button class="btn btn-outline-success" onclick="search()" type="button">
+              <button class="btn btn-outline-success rounded-4" onclick="search()" type="button">
                 Search
               </button>
             </form>
@@ -42,10 +43,10 @@
       </div>
     </nav>
 
-    <div class="container col-6">
-      <div class="card text-white">
-        <div class="card-header d-flex justify-content-center">
-          <h2 class="m-2" id="cityName">Dublin</h2>
+    <div class="container col-6" >
+      <div class="card text-white rounded-5">
+        <div class="card-header d-flex justify-content-center rounded-top-5">
+          <h2 class="m-2 text-success" id="cityName">Dublin</h2>
         </div>
         <div class="card-body text-center">
           <img
@@ -55,20 +56,20 @@
             width="150"
             height="150"
           />
-          <h3><span>54</span>&#xB0</h3>
+          <h3><span id="temperature">---</span>&#xB0 F</h3>
           <div class="container m-2">
-            <h5 class="text-start mb-4">
-              Cloudy
+            <h5 class="text-start mb-4" id="main">
+              ---
             </h5>
             <h5 class="text-start mb-4">
-              Real Feel: <span>51</span>&#xB0
+              Real Feel: <span id="feel">---</span>&#xB0 F
             </h5>
             <h5 class="text-start mb-2">
-              Wind Speed: <span>9</span>mph
+              Wind Speed: <span id="wind">---</span> mph
             </h5>
           </div>
         </div>
-        <div class="card-footer d-flex justify-content-center">
+        <div class="card-footer d-flex justify-content-center rounded-bottom-5">
           <p class="m-1 text-success">Powered by OpenWeatherMapAPI</p>
         </div>
       </div>
