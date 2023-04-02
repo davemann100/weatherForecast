@@ -12,7 +12,7 @@
     />
   </head>
   <body style="background-image: url('/assets/gg.jpg');">
-    <nav class="navbar navbar-expand-sm m-1 mb-4 bg-dark border-bottom border-success">
+    <nav class="navbar navbar-expand-sm m-1 mb-4 bg-dark border-bottom border-success rounded-5">
       <div class="container-fluid">
         <!-- Links -->
         <a class="navbar-brand" href="#">
@@ -51,7 +51,10 @@
         <div class="card-body text-center">
           <img
             src="assets/placeholder.png"
+            id="weatherIcon"
             class = "mb-3"
+            onmouseover="biggerImg(this)"
+            onmouseout="normalImg(this)"
             alt="current weather condition icon"
             width="150"
             height="150"
